@@ -6,6 +6,8 @@ use crate::models::User;
 use crate::schema::users::dsl::*;
 use rocket::tokio::sync::Mutex;
 use std::sync::Arc;
+use crate::schema::users;
+use crate::models::User;
 
 #[database("postgres_db")]
 pub struct DbConn(diesel::PgConnection);
