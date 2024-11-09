@@ -1,0 +1,20 @@
+[package]
+name = "game-rocket"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rocket = "0.5.1"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+diesel = { version = "2.0", features = ["postgres", "serde_json"] }
+rocket_sync_db_pools = "0.1" 
+
+
+# Diesel CLI (for setting up schema)
+[dev-dependencies]
+diesel_cli = { version = "2.0", features = ["postgres"] }
+
+# db connection string
+[global.databases]
+postgres_db = { url = "postgres://rocket_user:password@localhost/rocket_crud" }
